@@ -101,6 +101,13 @@
         "Iterations": ["ComputeTrue_sCacWeightValidSize", "ComputeFalse"], 
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c", 
         "Timeout": 15
+      }, 
+      {
+        "Name": "CcxInitializeCpbUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\CCX\\CcxInitializeCpb\\CcxInitializeCpbUt.json", 
+        "Iterations": ["CpbEnableTrue", "CpbEnableFalse"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c", 
+        "Timeout": 15
       }
     ]
   },
