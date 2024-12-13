@@ -94,6 +94,13 @@
         "Iterations" : ["SmeeEnableTrue", "SmeeEnableFalse"],
         "Target"     : "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c",
         "Timeout"    : 15
+      },
+      {
+        "Name": "CcxSetCacWeightsUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\CCX\\CcxSetCacWeights\\CcxSetCacWeightsUt.json", 
+        "Iterations": ["ComputeTrue_sCacWeightValidSize", "ComputeFalse"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c", 
+        "Timeout": 15
       }
     ]
   },
