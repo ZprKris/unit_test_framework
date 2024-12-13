@@ -86,7 +86,16 @@
   {
     "Component": "CCX",
     "Description": "Profile for xUSL CCX components",
-    "Tests" : []
+    "Tests" : 
+    [
+      {
+        "Name"       : "CcxEnableSmeeUt",
+        "ConfigFile" : "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\CCX\\CcxEnableSmee\\CcxEnableSmeeUt.json",
+        "Iterations" : ["SmeeEnableTrue", "SmeeEnableFalse"],
+        "Target"     : "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c",
+        "Timeout"    : 15
+      }
+    ]
   },
   {
     "Component": "DF",
