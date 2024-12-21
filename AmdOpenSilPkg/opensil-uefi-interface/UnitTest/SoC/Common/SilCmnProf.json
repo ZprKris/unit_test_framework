@@ -128,6 +128,15 @@
   {
     "Component": "DF",
     "Description": "Profile for xUSL DF components",
-    "Tests" : []
+    "Tests" : 
+    [
+      {
+        "Name": "TypeEntryInMapUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\TypeEntryInMap\\TypeEntryInMapUt.json", 
+        "Iterations": ["TypeMatch", "TypeMismatch"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\Common\\BaseFabricTopologyCmn.c", 
+        "Timeout": 15
+      }
+    ]
   }
 ]
