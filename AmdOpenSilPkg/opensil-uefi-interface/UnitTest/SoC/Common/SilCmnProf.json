@@ -108,6 +108,20 @@
         "Iterations": ["CpbEnableTrue", "CpbEnableFalse"], 
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c", 
         "Timeout": 15
+      },
+      {
+        "Name": "CcxSyncMiscMsrsUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\CCX\\CcxSyncMiscMsrs\\CcxSyncMiscMsrsUt.json", 
+        "Iterations": ["ZeroInitialized_InputStruct"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c", 
+        "Timeout": 15
+      }, 
+      {
+        "Name": "CcxSetMiscMsrsUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\CCX\\CcxSetMiscMsrs\\CcxSetMiscMsrsUt.json", 
+        "Iterations": ["ZeroInitialized", "ZeroInitialized_EnableSvmAVIC", "SilAborted"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\CCX\\Common\\CcxMiscInit.c", 
+        "Timeout": 15
       }
     ]
   },
