@@ -4,9 +4,12 @@
  *
  * Iterations:
  *
- * -Default: Executes 
- *  const AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP* DfFindDeviceTypeEntryInMap(FABRIC_DEVICE_TYPE)
+ *   - TypeMatch:    Executes DfFindDeviceTypeEntryInMap and passes the Type 
+ *                   that matches the DeviceMap Type returned from the API table (XferTable).
+ *   - TypeMismatch: Executes DfFindDeviceTypeEntryInMap and passes the Type 
+ *                   that mismatches the DeviceMap Type returned from the API table (XferTable).
  */
+
 
 #include <UtBaseLib.h>
 #include <UtLogLib.h>
@@ -14,18 +17,20 @@
 #include <SilBaseFabricTopologyLib.h>
 #include <DfCmn2Rev.h>
 #include <xSIM.h>
+#include <xSIM-api.h>
 #include <Sil-api.h>
 #include <SilCommon.h>
-#include "BaseFabricTopologyCmn.h"
-
-#include <xSIM-api.h>
 
 #include <Library/UtSilServicesMockLib.h>
 
+#include "BaseFabricTopologyCmn.h"
+
 // Dependency:
+// This variable holds the host debug service instance.
 HOST_DEBUG_SERVICE mHostDebugService = NULL;
 
-// API table function:
+// API Table Functions:
+// These functions simulate basic functionality for testing purposes.
 const AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP* My_DfGetDeviceMapOnDie(void)
 {
     static const AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP myMap[3] = {0}; 
@@ -61,10 +66,10 @@ TestBody (
         SIL_STATUS Status = SilPass;                                // status
         FABRIC_DEVICE_TYPE passedType = {0};                        // input - type
 
-        DF_COMMON_2_REV_XFER_BLOCK passedTable = {NULL};            // table
-        passedTable.DfGetDeviceMapOnDie = My_DfGetDeviceMapOnDie;   // called function in the table
+        DF_COMMON_2_REV_XFER_BLOCK passedTable = {NULL};            // API table
+        passedTable.DfGetDeviceMapOnDie = My_DfGetDeviceMapOnDie;   // called function in the API table
 
-        MockSilGetCommon2RevXferTableOnce(&passedTable, Status);    // mock with proper table and status
+        MockSilGetCommon2RevXferTableOnce(&passedTable, Status);    // mock with proper API table and status
         // Act 
         Ut->Log(AMD_UNIT_TEST_LOG_DEBUG, __FUNCTION__, __LINE__, 
         "Call DfFindDeviceTypeEntryInMap with the matching Type");
@@ -79,16 +84,16 @@ TestBody (
         SIL_STATUS Status = SilPass;                                // status
         FABRIC_DEVICE_TYPE passedType = {1};                        // input - type
 
-        DF_COMMON_2_REV_XFER_BLOCK passedTable = {NULL};            // table
-        passedTable.DfGetDeviceMapOnDie = My_DfGetDeviceMapOnDie;   // called function in the table
+        DF_COMMON_2_REV_XFER_BLOCK passedTable = {NULL};            // API table
+        passedTable.DfGetDeviceMapOnDie = My_DfGetDeviceMapOnDie;   // called function in the API table
 
-        MockSilGetCommon2RevXferTableOnce(&passedTable, Status);    // mock with proper table and status
+        MockSilGetCommon2RevXferTableOnce(&passedTable, Status);    // mock with proper API table and status
         // Act
         Ut->Log(AMD_UNIT_TEST_LOG_DEBUG, __FUNCTION__, __LINE__, 
             "Call DfFindDeviceTypeEntryInMap with the mismsatching Type");
         const AMD_FABRIC_TOPOLOGY_DIE_DEVICE_MAP * returnedMap = DfFindDeviceTypeEntryInMap (passedType);
         // Assert
-        if(returnedMap->Type == passedType) 
+        if(returnedMap) // should be null 
           UtSetTestStatus (Ut, AMD_UNIT_TEST_ABORTED);
     }
     else
