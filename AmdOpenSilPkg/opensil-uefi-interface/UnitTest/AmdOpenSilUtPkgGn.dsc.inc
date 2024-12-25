@@ -25,3 +25,4 @@
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/CCX/CcxSyncMiscMsrs/CcxSyncMiscMsrsUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/CCX/CcxSetMiscMsrs/CcxSetMiscMsrsUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/TypeEntryInMap/TypeEntryInMapUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/RootBridgeInfo/RootBridgeInfoUt.inf  

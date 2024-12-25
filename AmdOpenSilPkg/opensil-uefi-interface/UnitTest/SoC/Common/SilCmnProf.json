@@ -136,6 +136,13 @@
         "Iterations": ["TypeMatch", "TypeMismatch"], 
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\Common\\BaseFabricTopologyCmn.c", 
         "Timeout": 15
+      }, 
+      {
+        "Name": "RootBridgeInfoUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\RootBridgeInfo\\RootBridgeInfoUt.json", 
+        "Iterations": ["Socket", "Die", "Index", "SystemFabricID", "BusNumberLimit", "PhysicalRootBridgeNumber", "HasFchDevice", "HasSystemMgmtUnit"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\Common\\BaseFabricTopologyCmn.c", 
+        "Timeout": 15
       }
     ]
   }
