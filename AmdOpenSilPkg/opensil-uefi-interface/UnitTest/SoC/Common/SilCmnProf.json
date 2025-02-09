@@ -199,6 +199,34 @@
         "Iterations": ["NoConditionBranch","ConditionBranch"], 
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\DfXBaseFabricTopology.c", 
         "Timeout": 15
+      },
+      {
+        "Name": "GetPhysRootBNUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\GetPhysRootBN\\GetPhysRootBNUt.json", 
+        "Iterations": ["Default"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\DfXBaseFabricTopology.c", 
+        "Timeout": 15
+      },
+      {
+        "Name": "FindComponentLMUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\FindComponentLM\\FindComponentLMUt.json", 
+        "Iterations": ["Count", "PhysIos0FabricId"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\DfXBaseFabricTopology.c", 
+        "Timeout": 15
+      },
+      {
+        "Name": "FbrRegstrAccReadUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\FbrRegstrAccRead\\FbrRegstrAccReadUt.json", 
+        "Iterations": ["InstanceEnter", "InstanceSkip"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\DfXFabricRegisterAcc.c", 
+        "Timeout": 15
+      },
+      {
+        "Name": "FbrRegstrAccWriteUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\FbrRegstrAccWrite\\FbrRegstrAccWriteUt.json", 
+        "Iterations": ["InstanceEnter", "InstanceSkip"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\DfXFabricRegisterAcc.c", 
+        "Timeout": 15
       }
     ]
   }

@@ -34,3 +34,8 @@
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/GetDieSystemOffset/GetDieSystemOffsetUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/GetDeviceMapOnDie/GetDeviceMapOnDieUt.inf
   AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/GetHostBridgeBB/GetHostBridgeBBUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/GetHostBridgeBL/GetHostBridgeBLUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/GetPhysRootBN/GetPhysRootBNUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/FindComponentLM/FindComponentLMUt.inf
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/FbrRegstrAccRead/FbrRegstrAccReadUt.inf  
+  AmdOpenSilPkg/opensil-uefi-interface/UnitTest/Source/xUSL/DF/FbrRegstrAccWrite/FbrRegstrAccWriteUt.inf  
