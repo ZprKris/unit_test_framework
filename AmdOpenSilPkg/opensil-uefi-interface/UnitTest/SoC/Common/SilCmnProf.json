@@ -227,6 +227,13 @@
         "Iterations": ["InstanceEnter", "InstanceSkip"], 
         "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\DfXFabricRegisterAcc.c", 
         "Timeout": 15
+      },
+      {
+        "Name": "PieRasInitUt", 
+        "ConfigFile": "AmdOpenSilPkg\\opensil-uefi-interface\\UnitTest\\Source\\xUSL\\DF\\PieRasInit\\PieRasInitUt.json", 
+        "Iterations": ["AmdFabricWdtCntSel", "HwaStsLowValue", "CtrlInstance"], 
+        "Target": "AmdOpenSilPkg\\opensil-uefi-interface\\OpenSIL\\xUSL\\DF\\DfX\\FabricPieRasInit\\FabricPieRasInit.c", 
+        "Timeout": 15
       }
     ]
   }
